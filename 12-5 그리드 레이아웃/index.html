@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css 그리드 레이아웃 사용하기</title>
+</head>
+<style>
+  body {
+    width: 80%;
+    border: 1px solid red;
+    margin: 0 auto;
+  }
+
+
+  #wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    /* grid-template-rows: 100px; */
+    grid-gap: 20px 30px;
+    grid-template-columns: repeat(auto-fit, minmax(200px 1fr));
+  }
+
+  .items {
+    border: 1px solid;
+  }
+
+  .items:nth-child(even) {
+    background: #e5e5e5;
+  }
+
+  #container {
+    padding-top: 100px;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 10%;
+    border: 1px solid green;
+  }
+
+  .boxs {
+    display: grid;
+    /* grid-template-columns: 200px 200px 200px; */
+    /* grid-template-columns: 1fr 1fr 2fr; */
+    grid-template-columns: repeat(auto-fit, 200px);
+    /* grid-template-rows: 100px; */
+  }
+
+  .box {
+    border: 1px solid;
+    margin: 10px;
+    /* height: auto; */
+  }
+
+  .box:nth-child(even) {
+    background: #e5e5e5;
+  }
+
+</style>
+
+<body>
+  <div id="wrapper">
+    <div class="items">Lorem ipsum dolor sit.</div>
+    <div class="items">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, nisi!</div>
+    <div class="items">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi aliquid facere minus.</div>
+    <div class="items">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos corporis iste vitae debitis aperiam illum necessitatibus a modi aliquid libero.</div>
+    <div class="items">Lorem ipsum dolor sit amet consectetur.</div>
+  </div>
+  <div id="container">
+    <div class="boxs">
+      <div class="box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis, eum?</div>
+      <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur minima dicta quas numquam repudiandae eos!</div>
+      <div class="box">Lorem ipsum dolor sit amet consectetur.</div>
+      <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate!</div>
+      <div class="box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis placeat nisi et rerum magni dicta similique nostrum vel.</div>
+      <div class="box">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque repellendus alias sint quo ad quae, natus veritatis aut illum est corporis quam iure eos quis provident maxime labore quia! Dolorem!</div>
+    </div>
+  </div>
+</body>
+</html>
